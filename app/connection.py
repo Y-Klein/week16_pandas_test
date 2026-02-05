@@ -1,9 +1,11 @@
 from pymongo import MongoClient
 from os import getenv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-
-mongo_uri = getenv("MONGO_URI", "mongodb+srv://yklain:vW6pAW0dB6958k5P@mycluster.rd922r5.mongodb.net")
+mongo_uri = getenv("MONGO_URI")
 mongo_db = getenv("MONGO_DB", "testdb")
 mongo_collection = getenv("MONGO_COLLECTION", "testcollection")
 
